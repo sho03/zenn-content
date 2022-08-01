@@ -2,6 +2,7 @@ title: "cypressを使ったE2Eテスト"
 topics: []
 published: false
 price: 0
+allow_override: true
 chapters:
   - "299458"
   - "79e3b0"
