@@ -27,5 +27,6 @@ published: false
 # 実装
 
 # 参考
-[How do I implement social login with GitHub accounts?](https://stackoverflow.com/questions/71741596/how-do-i-implement-social-login-with-github-accounts)
-[Aurhorizing Oauth Apps](https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps)
+https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps
+https://stackoverflow.com/questions/71741596/how-do-i-implement-social-login-with-github-accounts
+https://blog.4breaker.com/2020/06/14/post-1378/
