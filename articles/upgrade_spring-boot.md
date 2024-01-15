@@ -3,7 +3,7 @@ title: "Spring Boot 2.7から3系へ"
 emoji: "👏"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["springboot", "spring", "kotlin"]
-published: false
+published: true
 publication_name: "welmo"
 ---
 
