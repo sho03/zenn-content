@@ -2,7 +2,7 @@
 title: "Spring Boot 2.7から3系へ"
 emoji: "👏"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["springboot", "spring"]
+topics: ["springboot", "spring", "kotlin"]
 published: false
 publication_name: "welmo"
 ---
@@ -10,6 +10,8 @@ publication_name: "welmo"
 ## この記事は
 Spring Bootを2.7から3系へあげた際のメモ書きです。
 具体的には以下のライブラリ/ツールをバージョンアップしました。
+
+なお、`Sprintg Boot + Kotlin`で記述しているため、`Kotlin`で利用するライブラリのアップデートが含まれています。（`Exposed`）
 
 | ライブラリ | before | after |
 | ---- | ---- | ---- |
@@ -30,7 +32,7 @@ https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.0-Migration-Gu
 [Spring MVC and WebFlux URL Matching Changes](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.0-Migration-Guide#spring-mvc-and-webflux-url-matching-changes)
 
 ```kotlin
-@GetMappign("/some/greeting")
+@GetMapping("/some/greeting")
 fun greeting() {
     return "hello"
 }
@@ -52,7 +54,7 @@ https://docs.spring.io/spring-security/reference/6.0/migration/index.html
 また、Qiitaの記事も大変参考になります。
 https://qiita.com/suke_masa/items/908805dd45df08ba28d8
 
-### EnablMethodSecurity
+### EnableMethodSecurity
 https://docs.spring.io/spring-security/reference/servlet/authorization/method-security.html#migration-enableglobalmethodsecurity
 
 ```diff kotlin
@@ -115,3 +117,8 @@ https://springdoc.org/faq.html#_what_is_the_compatibility_matrix_of_springdoc_op
 
 ## 他に参考になった資料
 https://speakerdeck.com/line_developers/findings-in-migrating-our-application-to-spring-boot-3-dot-0
+
+## 終わりに
+弊社では現在エンジニアを積極採用中です！介護業界のDXに興味のある方はぜひご応募ください 🙇   
+https://careers.welmo.co.jp/  
+https://www.green-japan.com/company/3394/job/234135  
