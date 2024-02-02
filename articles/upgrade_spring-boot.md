@@ -118,7 +118,3 @@ https://springdoc.org/faq.html#_what_is_the_compatibility_matrix_of_springdoc_op
 ## 他に参考になった資料
 https://speakerdeck.com/line_developers/findings-in-migrating-our-application-to-spring-boot-3-dot-0
 
-## 終わりに
-弊社では現在エンジニアを積極採用中です！介護業界のDXに興味のある方はぜひご応募ください 🙇   
-https://careers.welmo.co.jp/  
-https://www.green-japan.com/company/3394/job/234135  
