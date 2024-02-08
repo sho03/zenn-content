@@ -32,3 +32,4 @@ after
 #　参考資料
 https://cloud.google.com/run/docs/configuring/static-outbound-ip?hl=ja
 https://blog.g-gen.co.jp/entry/cloudrun-using-static-ip
+https://chimbu.medium.com/static-ip-for-google-cloud-cloud-functions-internet-access-serverless-vpc-access-cloud-nat-18cb4b89fb8e

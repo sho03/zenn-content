@@ -12,3 +12,11 @@ published: false
 ```shell
 $ brew install neovim
 ```
+
+```
+:h key-notation
+```
+
+```
+$ vimtutor
+```

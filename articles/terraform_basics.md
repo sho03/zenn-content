@@ -31,3 +31,21 @@ published: false
 # ファイルを分割する
 
 # 変数定義ファイルを作成する
+
+# localsで変数を定義する
+https://developer.hashicorp.com/terraform/language/values/locals
+
+```tf
+locals {
+  service_name = "forum"
+  owner        = "Community Team"
+}
+```
+
+```tf
+resource "aws_instance" "example" {
+  # ...
+
+  tags = local.common_tags
+}
+```
