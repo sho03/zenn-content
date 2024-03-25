@@ -3,7 +3,7 @@ title: "publishされたファイルをCloud Storageに保存する"
 emoji: "💬"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["gcp"]
-published: false
+published: true 
 publication_name: "welmo"
 ---
 
@@ -35,12 +35,14 @@ Cloud pub/subでpublishされたメッセージデータをCloud Storageに保�
 ## やっていく
 
 一つずつ必要なリソースを作成していきます。
-1. Cloud pub/sub
-2. Cloud Storage
-3. Cloud Functions
-の順で行います。（いずれも作成する際に前の手順で作成したリソースの情報を一部使用します。）
+1. Cloud Storage
+2. Cloud Functions
+3. Cloud pub/sub
+
+の順で行います。
 
 ### Cloud Storageを作成する
+Cloud Storageは、以下のコマンドを実行します。
 ```
 $ gcloud storage buckets create gs://test-http-trigger-bucket --location=asia-northeast1
 ```
