@@ -2,8 +2,8 @@
 title: "pub/subトリガーを使用してメッセージをCloud Storageに保存する"
 emoji: "🙆"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ['gcp', 'javascript']
-published: false
+topics: ['gcp']
+published: true
 publication_name: "welmo"
 ---
 
