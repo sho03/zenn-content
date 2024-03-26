@@ -1,0 +1,30 @@
+#!/bin/zsh
+
+echo "Which Do you create? a(article)/b(book) (default article)"
+target=""
+
+while true; do
+  read type
+  if [[ $type == "b" ]] || [[ $type == "book" ]]; then
+    target="book"
+    echo "you will create a book!"
+    break
+  elif [[ $type == "a" ]] || [[ $type == "article" ]] || [[ $type == "" ]]; then
+    target="article"
+    echo "you will create a article!"
+    break
+  else
+    echo "please select article(a) or book(b)"
+  fi
+done
+
+echo "please input article slug restrict: ^[0-9a-z-_]{12,50}$"
+read slug
+npx zenn new:$target --slug $slug
+
+if [[ $target == "article" ]]; then
+  echo "## この記事は" >> articles/$slug.md
+  echo "" >> articles/$slug.md
+  echo "## 参考" >> articles/$slug.md
+fi
+
