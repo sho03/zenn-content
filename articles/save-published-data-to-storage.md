@@ -60,7 +60,7 @@ const dayjs = require('dayjs');
 const { Storage } = require("@google-cloud/storage");
 
 functions.http('myHttpFunction', (req, res) => {
-  const base64data = req.data.message.data;
+  const base64data = req.body.message.data;
 
   if (!base64data) {
     console.log("failed recieving data.");
@@ -141,4 +141,5 @@ gs://test-http-trigger-bucket/2024-02-27T01:42:06-helloworld.json
 大丈夫そうです。
 
 ## 参考
+https://cloud.google.com/pubsub/docs/push?hl=ja#receive_push
 https://cloud.google.com/functions/docs/concepts/version-comparison?hl=ja
