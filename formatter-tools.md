@@ -1,14 +1,14 @@
 ---
-title: "Prettierを入れる"
+title: "Prettier/ESLint/lint-staged/husky"
 emoji: "😎"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["prettier"]
+topics: ['prettier', 'javascript', 'eslint']
 published: false
 ---
 ## この記事は
 https://prettier.io/
 
-## インストール
+## Prettier
 ```
 npm install --save-dev --save-exact prettier
 npm install eslint-config-prettier
@@ -26,18 +26,16 @@ build
 coverage
 ```
 
-## eslint plugins
-### eslint-plugin-import
+## ESLint
+#### eslint plugins
+#### eslint-plugin-import
 
-### eslint-plugin-sonarjs
+#### eslint-plugin-sonarjs
 
-### eslint-plugin-unused-imports
+#### eslint-plugin-unused-imports
 
-## 他
-### husky
+## lint-staged
 
-### lint-staged
-
-
+## husky
 
 ## 参考
