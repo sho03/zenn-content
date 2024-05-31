@@ -1,0 +1,13 @@
+title: "Neovimを始める"
+summary: "Neovimを使い始めたい初心者へ"
+topics: ['neovim']
+published: false
+price: 0 # 有料の場合200〜5000
+# 本に含めるチャプターを順番に並べましょう
+chapters:
+  - introduction
+  - what-is-neovim
+  - neovim-install
+  - key-bind
+  - configurations
+  - install-plugins
