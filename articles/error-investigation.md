@@ -2,7 +2,7 @@
 title: "エラーの調査"
 emoji: "🤖"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: []
+topics: ['error']
 published: false
 ---
 ## この記事は

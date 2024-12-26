@@ -6,5 +6,6 @@ topics: ['spring']
 published: false
 ---
 ## この記事は
+`@Transactional`を付与したメソッドが実行された際になぜトランザクションが開始されるのかを調査しました。
 
 ## 参考
