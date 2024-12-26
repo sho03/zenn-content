@@ -4,7 +4,6 @@ emoji: "🙆"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ['terraform', 'mysql']
 published: false
-publication_name: "welmo"
 ---
 
 ## この記事は

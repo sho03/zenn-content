@@ -4,7 +4,6 @@ emoji: "😊"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ['gcp', 'js']
 published: false
-publication_name: "welmo"
 ---
 ## この記事は
 GoogleのSpeech to textを使用してリアルタイム音声認識のWebアプリを作成した際のメモ書きです。

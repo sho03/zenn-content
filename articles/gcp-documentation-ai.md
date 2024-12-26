@@ -4,7 +4,6 @@ emoji: "👏"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ['gcp', 'ai']
 published: false
-publication_name: "welmo"
 ---
 ## この記事は
 Documentation AIを使ってみた時の記録です。
