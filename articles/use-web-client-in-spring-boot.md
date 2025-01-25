@@ -18,10 +18,58 @@ https://spring.pleiades.io/spring-framework/reference/integration/rest-clients.h
 | `RestTemplate` | 基本的には使わない。少なくとも新規開発においては選択肢に入れなくて良い。現時点では`deprecated`になっているわけでもないので、急いで上記のクライアントに変更しなくても問題ない。ただし、新規機能が追加されないことは留意すること。 | Text |
 
 ## 実装例
-`WebClient`と`RestClient`の使い方を簡単に説明します。まずは両者のコードを見てみましょう。
-`RestTemplate`については上記の理由から実装からは外しています。他の記事を参考にしてください。
-```kotlin:sample.kt
 
+```kotlin:sample.kt
+@Component
+class RestClientSample(
+    private val restTemplate: RestTemplate,
+    private val restClient: RestClient,
+    private val webClient: WebClient,
+) {
+
+    fun getTodoWithRestClient(id: Int): Todo {
+        val todo = restClient
+            .get()
+            .uri("https://jsonplaceholder.typicode.com/todos/{id}", id)
+            .retrieve()
+            .onStatus(HttpStatusCode::isError) { _, response ->
+                throw RuntimeException("failed get request ${response.statusCode}")
+            }
+            .body<Todo>()
+        if (todo == null) throw RuntimeException("body is empty.")
+        return todo
+    }
+
+    fun getTodoWithWebClient(id: Int): Mono<Todo> {
+        val result = webClient
+            .get()
+            .uri("https://jsonplaceholder.typicode.com/todos/{id}", id)
+            .retrieve()
+            .onStatus({status -> status.isError}) { response ->
+                Mono.error(RuntimeException("failed get request ${response.statusCode()}"))
+            }
+            .bodyToMono<Todo>()
+
+        return result
+    }
+
+    fun getTodoWithRestTemplate(id: Int): Todo {
+        val result = restTemplate.getForEntity("https://jsonplaceholder.typicode.com/todos/{id}", Todo::class.java, id)
+        if (result.statusCode.isError) {
+            throw RuntimeException("failed get request ${result.statusCode}")
+        }
+        val body = result.body ?: throw RuntimeException("body is null")
+
+        return body
+    }
+
+    data class Todo(
+        val userId: Int,
+        val id: Int,
+        val title: String,
+        val completed: Boolean
+    )
+}
 ```
 
 ### WebClient
