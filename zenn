@@ -18,9 +18,15 @@ while true; do
   fi
 done
 
-echo "please input article slug restrict: ^[0-9a-z-_]{12,50}$"
+echo "please input slug. restrict: ^[0-9a-z-_]{12,50}$"
+echo "if slug is empty, slug will be generated as random string."
 read slug
-npx zenn new:$target --slug $slug
+
+if [ -z "$slug" ]; then
+  npx zenn new:$target
+else
+  npx zenn new:$target --slug $slug
+fi
 
 if [[ $target == "article" ]]; then
   echo "## この記事は" >> articles/$slug.md
